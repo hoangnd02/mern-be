@@ -1,0 +1,115 @@
+###
+POST http://localhost:2000/api/signup
+Content-Type: application/json
+
+{
+    "firstName": "Hoang5",
+    "lastName": "Dang5",
+    "email": "Hoangdang5@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:2000/api/signin
+Content-Type: application/json
+
+{
+    "email": "Hoangdang@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:2000/api/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdhOWZhM2IxMWIwMTEzZjBiMTA1N2EiLCJpYXQiOjE2MTg5Mjk3ODEsImV4cCI6MTYxODkzMzM4MX0.zUQHt_ZQz9wu5amKU4tqUx9Xzb0SmksLBGfK-DSqizo
+
+###
+POST http://localhost:2000/api/category/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdmNmYxYWI4YWI2MjEyYzBjNGM5MzEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTg5NjQzMTcsImV4cCI6MTYxODk2NzkxN30.YSjBmVWIu84RXWxMXqM8voOJU-xqjFfPHiFOcySB1Ww
+
+{
+    "name": "Samsung",
+    "parentId": "607f73e4ff324116f012b154"
+}
+
+###
+GET http://localhost:2000/api/category/getcategory
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdmNmYxYWI4YWI2MjEyYzBjNGM5MzEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTk0MTIxMDAsImV4cCI6MTYxOTQxNTcwMH0.CNMK-hUfwqaYAi1KsSVaK2tL-XVTw1_mexzMhJzPPRU
+
+###
+POST http://localhost:2000/api/product/create
+Content-Type: application/json
+
+###
+POST http://localhost:2000/api/cart/addtocart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdmNmYxYWI4YWI2MjEyYzBjNGM5MzEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTkwOTAzOTcsImV4cCI6MTYxOTA5Mzk5N30.k-tY9uGNucQnCYuNK9Gb7XUtGyXKdysMP4vwlXTL5r0
+
+{
+    "cartItems": {
+            "product": "607fdc315da3dd24e88d29e5",
+            "quantity": 1,
+            "price": 200000  
+    }
+    
+}
+
+###
+POST http://localhost:2000/api/signout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdmNmYxYWI4YWI2MjEyYzBjNGM5MzEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTk0MTg5ODgsImV4cCI6MTYxOTQyMjU4OH0.2aRqUSDUwRN6NoCh1c--Ut2gnQ_CJ3_2UF3xKIDaXlg
+
+###
+GET http://localhost:2000/api/initialData
+Content-Type: application/json
+
+###
+GET http://localhost:2000/api/product/Samsung
+Content-Type: application/json
+
+###
+GET http://localhost:2000/api/607f73ffff324116f012b155/page
+Content-Type: application/json
+
+###
+GET http://localhost:2000/api/product/608f4cc21277512ca01ea4d7
+Content-Type: application/json
+
+
+###
+POST http://localhost:2000/api/user/address/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdmNmYxYWI4YWI2MjEyYzBjNGM5MzEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MjEzODkzMjcsImV4cCI6MTYyMTQ3NTcyN30.S_K9zknjGTkiBTn_LpZVxozLwu2262xjherjoUBJ36Q
+
+{
+    "payload": {
+        "address": {
+            "name": "Hoang",
+            "mobileNumber": "0763462080",
+            "pincode": "141248",
+            "locality": "Thai binh distric, vietnam",
+            "address": "Thai binh distric, vietnam",
+            "cityDistrictTown": "Thai Binh",
+            "landmark": "Pulbic athena",
+            "alternatephonr": "09286352",
+            "addressType": "home" 
+        }
+    }
+}
+
+###
+POST  http://localhost:2000/api/comment/607fdc315da3dd24e88d29e5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdmNmYxYWI4YWI2MjEyYzBjNGM5MzEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MjIzNTYxNjQsImV4cCI6MTYyMjQ0MjU2NH0.oYUH6dKQhuw4dkczvSodicoNb4U9Np9RRjfhXBMbLQ0
+
+{
+    "content": "San pham rat ok",
+    "star": 4.5,
+    "productId": "607fdc315da3dd24e88d29e5"
+}
+
+###
+POST http://localhost:2000/api/getAllComments/607fdc315da3dd24e88d29e5
+Content-Type: application/json
